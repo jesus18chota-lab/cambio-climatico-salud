@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambio climático y salud comunitaria</title>
+<style>
+:root{--forest:#245b4b;--leaf:#6c9a76;--sage:#e6efe5;--cream:#fbf7ed;--earth:#a66b45;--ink:#20332d;--blue:#dcecf0;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+header{background:linear-gradient(120deg,rgba(20,61,49,.93),rgba(42,98,77,.83)),url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1800&q=85') center/cover;color:white;padding:62px 20px 48px}
+.hero{max-width:1100px;margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.78rem;font-weight:bold;color:#d8e8ce}
+h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.05;margin:12px 0 18px;max-width:800px}
+header p{font-size:1.12rem;max-width:720px}
+.pill{display:inline-block;border:1px solid #d8e8ce;border-radius:30px;padding:6px 12px;margin:12px 8px 0 0;font-size:.85rem}
+nav{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 3px 14px #163b2b18;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:10px}
+nav a{color:var(--forest);text-decoration:none;font-size:.9rem;font-weight:bold;padding:8px 12px;border-radius:20px}
+nav a:hover,nav a:focus{background:var(--sage)}
+main{max-width:1100px;margin:34px auto;padding:0 18px}
+.intro{background:#fff;border-left:5px solid var(--leaf);padding:20px 24px;border-radius:12px;box-shadow:0 5px 20px #1b3a2810;margin-bottom:28px}
+h2{color:var(--forest);font-size:clamp(1.55rem,3vw,2.25rem);line-height:1.2;margin:0 0 14px}
+h3{color:var(--forest);margin:0 0 8px}
+.section{margin:42px 0;scroll-margin-top:85px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}
+.section-head p{max-width:650px;margin:0;color:#52655c}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:white;border-radius:16px;overflow:hidden;box-shadow:0 6px 22px #20332d10;border:1px solid #e7e8dc}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card-body{padding:20px}
+.tag{display:inline-block;background:var(--sage);color:var(--forest);padding:4px 9px;border-radius:20px;font-size:.78rem;font-weight:bold;margin-bottom:8px}
+ul{padding-left:20px;margin:8px 0}
+li{margin:6px 0}
+.term{font-weight:bold;color:#8b512e;border-bottom:1px dotted #8b512e;cursor:help}
+.note{background:#f3f0df;padding:12px 14px;border-radius:10px;margin-top:12px;font-size:.93rem}
+.two-strategies{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.strategy{padding:23px;background:#e8f0e6;border-radius:16px;border-top:5px solid var(--leaf)}
+.strategy:nth-child(2){background:#e5eff1;border-color:#5d91a0}
+.number{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--forest);color:white;font-weight:bold;margin-bottom:10px}
+.strategy:nth-child(2) .number{background:#326b7a}
+details{background:white;border:1px solid #e3e6db;border-radius:10px;padding:13px 16px;margin:10px 0}
+summary{cursor:pointer;font-weight:bold;color:var(--forest)}
+button{border:0;border-radius:9px;padding:11px 16px;background:var(--forest);color:white;font-weight:bold;cursor:pointer;font-size:.95rem}
+button:hover{filter:brightness(1.1)}
+button.secondary{background:#e3eee1;color:var(--forest)}
+.quiz{background:#fff;border-radius:16px;padding:24px;box-shadow:0 6px 22px #20332d10}
+.question{padding:15px 0;border-bottom:1px solid #e8eadf}
+.question:last-child{border-bottom:0}
+.question p{font-weight:bold;margin:0 0 8px}
+.question label{display:block;padding:6px 0;cursor:pointer}
+.feedback{margin-top:15px;padding:12px;border-radius:9px;display:none}
+.feedback.good{display:block;background:#e2f2e5;color:#205a36}
+.feedback.bad{display:block;background:#fff0dd;color:#80491e}
+.resource{display:flex;gap:22px;align-items:center;background:#e6efe5;padding:22px;border-radius:16px}
+.resource .icon{font-size:3rem}
+.resource a{color:#1b624c;font-weight:bold;overflow-wrap:anywhere}
+footer{background:#1e4639;color:#edf5ec;padding:32px 20px;margin-top:48px}
+footer .inner{max-width:1100px;margin:auto}
+footer a{color:#d8e8ce}
+.small{font-size:.88rem;color:inherit}
+.sources li{overflow-wrap:anywhere}
+@media(max-width:720px){.grid,.two-strategies{grid-template-columns:1fr}.section-head{display:block}.card img{height:190px}.resource{align-items:flex-start;flex-direction:column}nav{position:static}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hero">
+    <div class="eyebrow">Enfermería · Cambio climático y gestión de riesgos</div>
+    <h1>Cambio climático y salud comunitaria</h1>
+    <p>Un recurso para explorar cómo los cambios del clima afectan el agua, el ambiente, la alimentación y la salud; y cómo la enfermería puede ayudar a proteger a las comunidades.</p>
+    <span class="pill">Recurso educativo interactivo</span><span class="pill">Prevención y acción comunitaria</span>
+  </div>
+</header>
+<nav aria-label="Navegación principal">
+  <a href="#agua">Agua y salud</a><a href="#vectores">Vectores</a><a href="#alimentos">Suelo y nutrición</a><a href="#vulnerabilidad">Vulnerabilidad</a><a href="#enfermeria">Enfermería</a><a href="#quiz">Autoevaluación</a>
+</nav>
+<main>
+  <section class="intro">
+    <h2>¿Por qué importa?</h2>
+    <p>El cambio climático puede intensificar las sequías, las lluvias extremas y las olas de calor. Estos fenómenos pueden afectar el agua disponible, favorecer algunos riesgos sanitarios y dificultar la producción y el acceso a alimentos. Sus efectos no son iguales para todos: dependen de la exposición, los recursos y el acceso a servicios básicos.</p>
+    <p><strong>Cómo usar este recurso:</strong> explora las secciones, abre las notas desplegables y responde el cuestionario al final.</p>
+  </section>
+
+  <section class="section" id="agua">
+    <div class="section-head"><div><h2>01 · Agua y salud pública</h2><p>El acceso a agua segura es fundamental para prevenir enfermedades y cuidar la salud familiar.</p></div></div>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=1000&q=85" alt="Agua limpia que fluye entre piedras">
+        <div class="card-body"><span class="tag">Concepto clave</span><h3>Estrés hídrico</h3>
+          <p>Ocurre cuando la demanda de agua es alta en relación con la cantidad disponible. Las sequías y los cambios en las lluvias pueden aumentar la presión sobre las fuentes de agua.</p>
+          <details><summary>¿Qué riesgos genera?</summary><p>Puede dificultar la higiene, la preparación segura de alimentos y la limpieza del hogar. Si el agua se almacena de forma inadecuada o está contaminada, aumenta el riesgo de enfermedad.</p></details>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=1000&q=85" alt="Persona lavándose las manos con agua">
+        <div class="card-body"><span class="tag">Prevención</span><h3>Agua segura y EDAs</h3>
+          <p>Las <span class="term" title="Enfermedades diarreicas agudas">EDAs</span> pueden transmitirse por agua o alimentos contaminados. La deshidratación es una complicación importante, especialmente en niñas y niños pequeños.</p>
+          <ul><li>Consumir agua tratada o hervida cuando sea necesario.</li><li>Guardar el agua en recipientes limpios y tapados.</li><li>Lavarse las manos con agua y jabón.</li><li>Buscar atención sanitaria ante signos de deshidratación o empeoramiento.</li></ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="vectores">
+    <div class="section-head"><div><h2>02 · Vectores de transmisión</h2><p>Las condiciones de temperatura y lluvia pueden modificar la presencia de mosquitos y el riesgo de algunas enfermedades.</p></div></div>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1516934024742-b461fba47600?auto=format&fit=crop&w=1000&q=85" alt="Mosquito posado sobre una superficie">
+        <div class="card-body"><span class="tag">Riesgo sanitario</span><h3>Dengue y malaria</h3>
+          <p>Los <span class="term" title="Organismos, como ciertos mosquitos, que pueden transmitir agentes infecciosos">vectores de transmisión</span> pueden transportar agentes infecciosos entre personas. El dengue y la malaria tienen ciclos de transmisión y distribución diferentes; el riesgo depende de la región y de varios factores ambientales y sociales.</p>
+          <details><summary>¿Qué acciones ayudan?</summary><ul><li>Eliminar recipientes que acumulen agua.</li><li>Tapar los depósitos de almacenamiento.</li><li>Limpiar patios y alrededores.</li><li>Usar medidas de protección contra picaduras recomendadas por las autoridades sanitarias.</li></ul></details>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85" alt="Profesional de salud brindando orientación">
+        <div class="card-body"><span class="tag">Alerta y cuidado</span><h3>Reconocer y actuar</h3>
+          <p>La educación sanitaria ayuda a reconocer síntomas, evitar la automedicación y acudir oportunamente al establecimiento de salud.</p>
+          <div class="note"><strong>Importante:</strong> dolor abdominal intenso, vómitos persistentes, sangrado, dificultad para respirar o decaimiento marcado requieren evaluación médica urgente, especialmente si se sospecha dengue.</div>
+          <p><a href="https://www.gob.pe/institucion/minsa/campañas/8255-todo-lo-que-necesitas-saber-sobre-el-dengue" target="_blank" rel="noopener">Consulta la campaña oficial del MINSA sobre el dengue ↗</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="alimentos">
+    <div class="section-head"><div><h2>03 · Suelo, seguridad alimentaria y nutrición</h2><p>Las sequías, inundaciones y otros eventos extremos pueden afectar cultivos, ingresos familiares y disponibilidad de alimentos.</p></div></div>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=85" alt="Campos agrícolas y paisaje rural">
+        <div class="card-body"><span class="tag">Ambiente y alimentos</span><h3>El suelo también importa</h3>
+          <ul><li>La erosión y las inundaciones pueden deteriorar los suelos agrícolas.</li><li>Las sequías y el calor extremo pueden reducir el rendimiento de algunos cultivos.</li><li>La pérdida de cosechas puede afectar la disponibilidad y el precio de los alimentos.</li></ul>
+          <details><summary>¿Qué significa seguridad alimentaria?</summary><p>Que las personas tengan acceso físico y económico, en todo momento, a alimentos suficientes, inocuos y nutritivos para satisfacer sus necesidades y llevar una vida activa y saludable.</p></details>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1000&q=85" alt="Comida variada con frutas y verduras">
+        <div class="card-body"><span class="tag">Nutrición</span><h3>Desnutrición aguda y crónica</h3>
+          <p>La inseguridad alimentaria puede aumentar el riesgo de dietas insuficientes o poco variadas, aunque la desnutrición tiene múltiples causas.</p>
+          <ul><li><strong>Desnutrición aguda:</strong> bajo peso en relación con la talla, que puede reflejar una pérdida de peso reciente o falta de ganancia adecuada.</li><li><strong>Desnutrición crónica:</strong> retraso del crecimiento en talla para la edad, asociado a carencias prolongadas y otros factores.</li></ul>
+          <div class="note">La vigilancia del crecimiento infantil, la orientación nutricional y la derivación oportuna son acciones importantes de los servicios de salud.</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="vulnerabilidad">
+    <div class="section-head"><div><h2>04 · Vulnerabilidad climática</h2><p>Los efectos dependen de la exposición a los peligros, la sensibilidad de la población y los recursos disponibles para responder.</p></div></div>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=1000&q=85" alt="Inundación en una zona habitada">
+        <div class="card-body"><h3>¿Quiénes pueden estar más expuestos?</h3>
+          <ul><li>Familias con acceso limitado a agua segura y saneamiento.</li><li>Comunidades expuestas a inundaciones, sequías o calor intenso.</li><li>Niñas y niños, adultos mayores y personas con barreras para acceder a servicios.</li><li>Hogares con recursos limitados para recuperarse de una emergencia.</li></ul>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1000&q=85" alt="Personas colaborando en una actividad comunitaria">
+        <div class="card-body"><h3>Prepararse reduce riesgos</h3>
+          <p>La organización comunitaria, la información confiable, los sistemas de alerta y la coordinación con autoridades locales ayudan a reducir daños y responder de manera oportuna.</p>
+          <details><summary>Pregunta para reflexionar</summary><p>En tu comunidad, ¿qué riesgo relacionado con el clima podría afectar primero el agua, la alimentación o la salud? ¿Qué institución o grupo local podría ayudar a prevenirlo?</p></details>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="enfermeria">
+    <div class="section-head"><div><h2>05 · Dos estrategias desde enfermería comunitaria</h2><p>La enfermería puede unir la prevención, la educación sanitaria y la vigilancia con la participación de la comunidad.</p></div></div>
+    <div class="two-strategies">
+      <article class="strategy"><div class="number">1</div><h3>Educación sanitaria y prevención</h3>
+        <ul><li>Realizar charlas y demostraciones sobre agua segura, lavado de manos y manipulación higiénica de alimentos.</li><li>Orientar sobre eliminación de criaderos de mosquitos y medidas para evitar picaduras.</li><li>Promover alimentación variada y reconocer signos de alarma.</li><li>Usar materiales claros y adecuados al idioma y las costumbres de la comunidad.</li></ul>
+        <p><strong>Resultado esperado:</strong> familias con más conocimientos y prácticas preventivas.</p>
+      </article>
+      <article class="strategy"><div class="number">2</div><h3>Vigilancia y preparación comunitaria</h3>
+        <ul><li>Identificar, junto con el equipo de salud, hogares con mayor exposición o barreras de acceso.</li><li>Observar y comunicar oportunamente riesgos sanitarios y posibles brotes según los protocolos locales.</li><li>Coordinar campañas de limpieza, eliminación de criaderos y almacenamiento seguro de agua.</li><li>Orientar y derivar a los servicios de salud a personas con señales de alarma o riesgo nutricional.</li></ul>
+        <p><strong>Resultado esperado:</strong> detección más temprana de riesgos y mejor coordinación local.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-head"><div><h2>06 · Comprueba lo aprendido</h2><p>Responde las tres preguntas y pulsa “Revisar respuestas”.</p></div></div>
+    <div class="quiz">
+      <form id="quizForm">
+        <div class="question"><p>1. ¿Qué significa estrés hídrico?</p>
+          <label><input type="radio" name="q1" value="a"> Que hay agua ilimitada para todas las necesidades.</label>
+          <label><input type="radio" name="q1" value="b"> Que la demanda de agua es alta en relación con la cantidad disponible.</label>
+          <label><input type="radio" name="q1" value="c"> Que el suelo tiene demasiados nutrientes.</label>
+        </div>
+        <div class="question"><p>2. ¿Cuál es una medida útil para reducir criaderos de mosquitos?</p>
+          <label><input type="radio" name="q2" value="a"> Dejar recipientes destapados en el patio.</label>
+          <label><input type="radio" name="q2" value="b"> Guardar agua en recipientes abiertos.</label>
+          <label><input type="radio" name="q2" value="c"> Eliminar el agua acumulada y tapar los depósitos.</label>
+        </div>
+        <div class="question"><p>3. ¿Cuál es una función de enfermería comunitaria ante riesgos climáticos?</p>
+          <label><input type="radio" name="q3" value="a"> Educar, identificar riesgos y coordinar la prevención con la comunidad.</label>
+          <label><input type="radio" name="q3" value="b"> Reemplazar todas las funciones de las autoridades ambientales.</label>
+          <label><input type="radio" name="q3" value="c"> Recomendar medicamentos sin evaluación clínica.</label>
+        </div>
+        <button type="button" onclick="checkQuiz()">Revisar respuestas</button>
+        <button type="reset" class="secondary" onclick="resetQuiz()">Intentar de nuevo</button>
+        <div id="quizResult" class="feedback" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" id="fuentes">
+    <h2>Fuentes para ampliar la información</h2>
+    <p>Consulta estas fuentes institucionales y verifica las recomendaciones vigentes en tu localidad.</p>
+    <div class="resource"><div class="icon" aria-hidden="true">🔎</div><div><h3>Infórmate y previene</h3><p>Campaña oficial del Ministerio de Salud del Perú sobre el dengue.</p><a href="https://www.gob.pe/institucion/minsa/campañas/8255-todo-lo-que-necesitas-saber-sobre-el-dengue" target="_blank" rel="noopener">Abrir recurso del MINSA ↗</a></div></div>
+    <ul class="sources">
+      <li><a href="https://www.gob.pe/minsa" target="_blank" rel="noopener">Ministerio de Salud del Perú (MINSA)</a>: recomendaciones y alertas sanitarias.</li>
+      <li><a href="https://www.gob.pe/minam" target="_blank" rel="noopener">Ministerio del Ambiente del Perú (MINAM)</a>: información sobre ambiente y cambio climático.</li>
+      <li><a href="https://www.who.int/es/health-topics/climate-change" target="_blank" rel="noopener">Organización Mundial de la Salud (OMS)</a>: cambio climático y salud.</li>
+      <li><a href="https://www.who.int/es/news-room/fact-sheets/detail/diarrhoeal-disease" target="_blank" rel="noopener">OMS: enfermedades diarreicas</a>.</li>
+      <li><a href="https://www.fao.org/home/es" target="_blank" rel="noopener">Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)</a>: seguridad alimentaria y agricultura.</li>
+    </ul>
+    <p class="small">Nota académica: este recurso es educativo y no sustituye la evaluación ni las indicaciones de profesionales de salud. Las condiciones y recomendaciones pueden variar por localidad.</p>
+  </section>
+</main>
+<footer><div class="inner"><h2 style="color:white">Cuidar la salud también es prepararnos para el clima</h2><p>La enfermería comunitaria cumple un papel fundamental en la prevención, la educación sanitaria y la protección de las poblaciones vulnerables frente al cambio climático.</p><p class="small">Recurso educativo para el curso Cambio Climático y Gestión de Riesgos · Sesión 08</p></div></footer>
+<script>
+function checkQuiz(){
+ const answers={q1:'b',q2:'c',q3:'a'};
+ let score=0,answered=0;
+ for(const [q,correct] of Object.entries(answers)){
+   const chosen=document.querySelector('input[name="'+q+'"]:checked');
+   if(chosen){answered++;if(chosen.value===correct)score++;}
+ }
+ const result=document.getElementById('quizResult');
+ result.className='feedback '+(score===3?'good':'bad');
+ if(answered<3){result.textContent='Has respondido '+answered+' de 3 preguntas. Completa las que faltan y vuelve a revisar.';}
+ else if(score===3){result.textContent='¡Excelente! Respondiste correctamente las 3 preguntas.';}
+ else{result.textContent='Tu resultado es '+score+' de 3. Revisa las secciones y vuelve a intentarlo.';}
+}
+function resetQuiz(){const result=document.getElementById('quizResult');result.className='feedback';result.textContent='';}
+</script>
+</body>
+</html>
